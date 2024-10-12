@@ -47,7 +47,7 @@ Clone the original juice-shop repo and replace the Dockerfile with the one here 
 ````bash
 docker build -t <your-image-name>:armv7```
 
-This will build the image on your ARMv7 device.
+This will build the image on your ARMv7 device.```
 
 #### Option 2: Cross-building with docker buildx
 A faster way to build the image is to use docker buildx on a more powerful machine (like your laptop or desktop) to cross-compile the image for ARMv7. Here's how you can do it:
