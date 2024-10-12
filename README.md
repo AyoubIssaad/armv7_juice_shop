@@ -44,7 +44,7 @@ You can build the image directly on an ARMv7 machine like a Raspberry Pi. Howeve
 
 Clone the original juice-shop repo and replace the Dockerfile with the one here then run this command inside the directory where the Dockerfile is located:
 
-````bash
+```bash
 docker build -t <your-image-name>:armv7```
 
 This will build the image on your ARMv7 device.
@@ -63,15 +63,16 @@ docker buildx create --use```
 
 3. Build the image for ARMv7:
 
-```bash\
+```bash
 docker buildx build --platform linux/arm/v7 -t <your-dockerhub-username>/juice-shop:armv7 --push .```
 
 This will build and push the image to Docker Hub under the armv7 tag. You can replace <your-dockerhub-username> with your actual Docker Hub username.
 
 ### Running the Built Image
 After building, you can run the image using the same commands mentioned above:
-docker run --rm -p 127.0.0.1:3000:3000 <your-dockerhub-username>/juice-shop
+```bash
+docker run --rm -p 127.0.0.1:3000:3000 <your-dockerhub-username>/juice-shop```
 
 ### Official Juice Shop Documentation
 For more information about OWASP Juice Shop and its usage, visit the [official documentation](https://owasp-juice.shop/).
-````
+
